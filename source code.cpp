@@ -1,19 +1,19 @@
 #include <iostream>
 #include<stdlib.h>
 using namespace std;
-int first_day(int year,int M){
-    system("Color 3E");
-    int D=year%100;
-    int C=year/100;
-    int K=1;
-    int F = K + (13*M - 1)/5 + D + D/4 + C/4 - 2*C;
+int first_day(int year,int M){   //function for finding first day of(i.e Sunday,Monday etc) month using  Zeller's rule  
+    system("Color 3E");  
+    int D=year%100;          // M = Month no. ,D = Last two digits of the year, C = The first two digits of year , 
+    int C=year/100;          // so for 2021 D=21  C=20 and
+    int K=1;                 //according to Zeller calendar For March M=1 ,april M=2 and so on..hence for dec. M=10, Jan M=11, Feb M=12
+    int F = K + (13*M - 1)/5 + D + D/4 + C/4 - 2*C;  
     if(F>=0)
      {
        return(F%7);
       }
     else
      {
-        return(((F%7)+7)%7);
+        return(((F%7)+7)%7);  //this function will return nos 0-6 such tha for 0 first day of month is sunday, fir 1 monday and son on till 6 for Saturday
       }
 }
 void display_calendar(string month,int Ist_day,int days){
@@ -37,7 +37,7 @@ void display_calendar(string month,int Ist_day,int days){
 
 
 }
-int main()
+int main()   //This is the main function where we take input from user 
 {
     int year,n,Ist_day;
     string month;
@@ -47,13 +47,13 @@ int main()
     cout<<"\n Enter first three letters of month (eg. for january enter 'jan') ";
     cin>>month;
 
-    for(int i=0;i<12;i++){
+    for(int i=0;i<12;i++){     
         if (arr[i]==month){
             n=i;
             break;
         }
     }
-    switch(n){
+    switch(n){    
         case(0):
             Ist_day=first_day(year-1,11);
             display_calendar("January",Ist_day,31);
