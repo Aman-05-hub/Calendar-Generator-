@@ -32,7 +32,7 @@ void display_calendar(string month,int Ist_day,int days){
             cout<<"\n";
             weekDay=0;
         }
-        Ist_day=weekDay;
+        
       }
 
 
