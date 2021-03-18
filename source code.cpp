@@ -40,13 +40,13 @@ void display_calendar(string month, int Ist_day, int days){      //function to d
 
 
 }
-int main()   //Program starts from here .
+int main()   //Program execution starts from here .
 {
     int year,n,Ist_day;
     string month;
     cout<<"Enter year: ";
     cin>>year;
-    cout<<"\n Enter first three letters of month (eg. for january enter 'jan') ";
+    cout<<"\nEnter first three letters of month (eg. for january enter 'jan') ";
     cin>>month;
     string arr[]={"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"};
     for(int i=0;i<12;i++){     
