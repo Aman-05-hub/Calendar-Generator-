@@ -1,5 +1,6 @@
 # Calendar-Generator-
 Algorithim of the goes as:
+
 Step-1  We take the year(centuary) from user as int value and store it in  'year'
 
 Step-2  We take the month (as jan ,feb...) as string and store it in 'month'
