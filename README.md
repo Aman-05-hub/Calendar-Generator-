@@ -13,12 +13,13 @@ step-4  Then we compare month entered by the user with all the elements of above
         
 step-5  Now switch cases are  formed for all the months with 'n' as argument of switch (switch(n)) hence if user entered "mar" (March ) then n=2(from above step we got the 
         value of n ) and we will be forwarded to case(2) and all the instructions under case(2) will be executed .  
-        Note: zellar's rule has been used to find first day of the month. (https://www.careeranna.com/articles/find-day-for-given-date-quickly/)
+       
         
 
 Step-6  in each case first we call a function first_day which will return first day of the entered month in the from of integer from 0-6 such that 0 represents Sunday , 1-monday 
         and so on till 6- Saturday . Hence if the function returns 1 the first day of the month is Monday.
         This returned int value is stored in int variable 'Ist_day'.
+         Note: zellar's rule has been used to find first day of the month. (https://www.careeranna.com/articles/find-day-for-given-date-quickly/)
 
 Step -7 Now we know the day(Sun-Sat) from which our calendar will start so all we need to do now is print the days  starting  from the first day and then print all the
         days till the last day of the entered month (i.e 1 to 30/31/29/28)
