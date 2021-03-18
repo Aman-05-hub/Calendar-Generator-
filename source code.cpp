@@ -16,11 +16,14 @@ int first_day(int year,int M){   //function for finding first day of(i.e Sunday,
         return(((F%7)+7)%7);  //this function will return nos 0-6 such tha for 0 first day of month is sunday, fir 1 monday and son on till 6 for Saturday
       }
 }
-void display_calendar(string month,int Ist_day,int days){
+
+void display_calendar(string month, int Ist_day, int days){      //function to display calendar 
     cout<<"\n------------ "<<month<<" ------------\n\n";
+    
     cout<<"  Sun  Mon  Tue  Wed  Thu  Fri  Sat\n";
+    
     int weekDay;
-    for( weekDay=0;weekDay<Ist_day;weekDay++){
+    for( weekDay=0;weekDay<Ist_day;weekDay++){       
         cout<<"     "; }
     for(int day=1;day<=days;day++){
         if(day<10){
@@ -37,16 +40,15 @@ void display_calendar(string month,int Ist_day,int days){
 
 
 }
-int main()   //This is the main function where we take input from user 
+int main()   //Program starts from here .
 {
     int year,n,Ist_day;
     string month;
-    string arr[]={"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"};
     cout<<"Enter year: ";
     cin>>year;
     cout<<"\n Enter first three letters of month (eg. for january enter 'jan') ";
     cin>>month;
-
+    string arr[]={"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"};
     for(int i=0;i<12;i++){     
         if (arr[i]==month){
             n=i;
@@ -54,69 +56,80 @@ int main()   //This is the main function where we take input from user
         }
     }
     switch(n){    
-        case(0):
+        case(0):                                //Jan
             Ist_day=first_day(year-1,11);
-            display_calendar("January",Ist_day,31);
+            display_calendar("January",Ist_day,31);    
 
             break;
-        case(1):
+        case(1):                            //This is special case as this Feb and it can have 28 or 29 days 
            Ist_day=first_day(year-1,12);
-           int dates;
-           if(year%400==0)
+           int days;
+           
+            if(year%400==0)                 //if else statements for checking leap year 
            {
-             dates=29;
+             days=29;
            }
            else if(year%100==0)
            {
-             dates=28;
+             days=28;
            }
            else if(year%4==0)
            {
-             dates=29;
+             days=29;
            }
            else
            {
-             dates=28;}
+             days=28;}
 
-            display_calendar("February",Ist_day,dates);
+            display_calendar("February",Ist_day,days);
 
             break;
+        
         case(2):
             Ist_day=first_day(year,1);
             display_calendar("March",Ist_day,31);
             break;
+       
         case(3):
             Ist_day=first_day(year,2);
             display_calendar("April",Ist_day,30);
             break;
+       
         case(4):
             Ist_day=first_day(year,3);
             display_calendar("May",Ist_day,31);
             break;
+       
         case(5):
             Ist_day=first_day(year,4);
             display_calendar("June",Ist_day,30);
             break;
+       
         case(6):
             Ist_day=first_day(year,5);
             display_calendar("July",Ist_day,31);
             break;
+        
         case(7):
             Ist_day=first_day(year,6);
             display_calendar("August",Ist_day,31);
             break;
+        
         case(8):
             Ist_day=first_day(year,7);
             display_calendar("September",Ist_day,30);
             break;
+        
         case(9):
             Ist_day=first_day(year,8);
             display_calendar("October",Ist_day,31);
             break;
+        
         case(10):
             Ist_day=first_day(year,9);
             display_calendar("Novemver",Ist_day,30);
             break;
+        
         case(11):
             Ist_day=first_day(year,10);
             display_calendar("December",Ist_day,31);
