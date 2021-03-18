@@ -1,5 +1,6 @@
 # Calendar-Generator-
 Algorithim of the goes as:
+Note : Program Starts from  main function (int main()) 
 
 Step-1  We take the year(century) from user as int value and store it in  'year'
 
