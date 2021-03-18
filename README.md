@@ -21,7 +21,7 @@ Step-6  in each case first we call a function first_day which will return first 
         This returned int value is stored in int variable 'Ist_day'.
          Note: zellar's rule has been used to find first day of the month. (https://www.careeranna.com/articles/find-day-for-given-date-quickly/)
 
-Step -7 Now we know the day(Sun-Sat) from which our calendar will start so all we need to do now is print the days  starting  from the first day and then print all the
-        days till the last day of the entered month (i.e 1 to 30/31/29/28)
+Step -7 Now we know the day(Sun-Sat) from which our calendar will start so all we need to do now is print the dates  starting  from the first day and then print all the
+        dates till the last day of the entered month (i.e 30 or 31 or 29 or 28)
         So for printing the calendar we call a function display_calendar and pass the name of month, first day of month and no. of days in entered month
         
